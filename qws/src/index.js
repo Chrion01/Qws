@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import NavBar from './nav.js';
+import Home from './home.js';
 import './index.css';
 
 class MainPage extends React.Component{
@@ -14,7 +15,13 @@ class MainPage extends React.Component{
 		console.log("page", event.target.id);
 	}
 	render(){
-		let page = this.state.page;
+		let page = <Home />;
+		if (this.state.page === 2){
+			page = null;
+		}
+		else if (this.state.page === 3){
+			page = null;
+		}
 		return(<div>
 			<h3>
 				TITLE
@@ -22,8 +29,7 @@ class MainPage extends React.Component{
 
 			<NavBar handlePageChange={this.handlePageChange}></NavBar>
 			
-			<p> words {page}</p>
-			
+			{page}
 		</div>
 
 		);

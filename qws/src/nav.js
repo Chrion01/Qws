@@ -14,7 +14,7 @@ class NavBar extends React.Component{
 	}
 	render(){
 		return(<div>
-			<ul>
+			<ul className="nav">
 				<li id='1' onClick={this.handleClick}>1</li>
 				<li id='2' onClick={this.handleClick}>2</li>
 				<li id='3' onClick={this.handleClick}>3</li>

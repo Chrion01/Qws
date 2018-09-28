@@ -1,17 +1,20 @@
-ul{
+ul.nav {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-
+	background: lightgrey;
+	margin-bottom: 25px;
+	padding-left: 5%;
 }
-li{
+ul.nav li{
 	float: left;
 	text-align: center;
 	text-decoration: none;
 	padding: 10px;
 
 }
-li:hover{
+ul.nav li:hover{
 	background-color: grey;
+	cursor: pointer;
 }

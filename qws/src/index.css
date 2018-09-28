@@ -1,5 +1,8 @@
 body {
   font-family: sans-serif;
 }
-
+p {
+	margin: auto;
+	width: 90%;
+}
 
