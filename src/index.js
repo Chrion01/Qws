@@ -7,7 +7,7 @@ import './index.css';
 class MainPage extends React.Component{
 	constructor(props){
 		super(props);
-		this.state = {page : 1};
+		this.state = {page : "1"};
 		this.handlePageChange = this.handlePageChange.bind(this);
 	}
 	handlePageChange(event){
@@ -16,11 +16,11 @@ class MainPage extends React.Component{
 	}
 	render(){
 		let page = <Home />;
-		if (this.state.page === 2){
-			page = null;
+		if (this.state.page === "2"){
+			page = (<p>Nothing here yet</p>);
 		}
-		else if (this.state.page === 3){
-			page = null;
+		else if (this.state.page === "3"){
+			page = (<p>Nothing here yet either</p>);
 		}
 		return(<div>
 			<h3>
