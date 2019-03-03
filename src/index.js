@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import NavBar from './nav.js';
 import Home from './home.js';
+import Js from './js.js';
 import './index.css';
 
 class MainPage extends React.Component{
@@ -17,7 +18,7 @@ class MainPage extends React.Component{
 	render(){
 		let page = <Home />;
 		if (this.state.page === "2"){
-			page = (<p>Nothing here yet</p>);
+			page = (<div>Nothing here yet <Js /> </div>);
 		}
 		else if (this.state.page === "3"){
 			page = (<p>Nothing here yet either</p>);

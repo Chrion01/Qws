@@ -16,7 +16,7 @@ class NavBar extends React.Component{
 		return(<div>
 			<ul className="nav">
 				<li id="1" onClick={this.handleClick}>Home</li>
-				<li id="2" onClick={this.handleClick}>2</li>
+				<li id="2" onClick={this.handleClick}>A javascript thing</li>
 				<li id="3" onClick={this.handleClick}>3</li>
 			</ul>
 			</div>
