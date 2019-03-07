@@ -1,4 +1,5 @@
 import React from 'react';
+import {can_start} from './can.js';
 
 class Js extends React.Component{
 	constructor(props) {
@@ -81,6 +82,10 @@ class Js extends React.Component{
 			clearInterval(this.interval);
 			console.log(4);
 		}
+		else if(this.state.jstate === 5){
+			can_start(this.refs.can, this.v);
+			console.log(5);
+		}
 		else{
 			console.log(this.state.jstate);
 		}
@@ -117,8 +122,8 @@ class Js extends React.Component{
 	render(){
 		return(
 			<p id="jds">
-				{this.state.jstate <=5 &&
-				<canvas ref="can" >
+				{this.state.jstate <=7 &&
+				<canvas ref="can" id='can' >
 				</canvas>
 				}
 				{this.state.jstate <= 6 &&
