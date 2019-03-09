@@ -1,5 +1,5 @@
 import React from 'react';
-import {can_start} from './can.js';
+import {can_start, increase_max_alt} from './can.js';
 
 class Js extends React.Component{
 	constructor(props) {
@@ -86,7 +86,12 @@ class Js extends React.Component{
 			can_start(this.refs.can, this.v);
 			console.log(5);
 		}
+		else if(this.state.jstate === 6){
+			increase_max_alt();
+			console.log(6);
+		}
 		else{
+			increase_max_alt();
 			console.log(this.state.jstate);
 		}
 		this.setState({jstate: this.state.jstate + 1});
@@ -122,11 +127,11 @@ class Js extends React.Component{
 	render(){
 		return(
 			<p id="jds">
-				{this.state.jstate <=7 &&
+				{this.state.jstate <=20 &&
 				<canvas ref="can" id='can' >
 				</canvas>
 				}
-				{this.state.jstate <= 6 &&
+				{this.state.jstate <= 8 &&
 					<button onClick={this.handleButton}>More javascript</button>
 				}
 			</p>
