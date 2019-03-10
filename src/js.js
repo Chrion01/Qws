@@ -1,5 +1,5 @@
 import React from 'react';
-import {can_start, increase_max_alt} from './can.js';
+import {can_start, increase_max_alt, can_end} from './can.js';
 
 class Js extends React.Component{
 	constructor(props) {
@@ -23,6 +23,7 @@ class Js extends React.Component{
 	}
 	componentWillUnmount() {
 		clearInterval(this.interval);
+		can_end();
 	}
 	componentDidUpdate(){
 		
