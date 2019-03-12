@@ -1,3 +1,3 @@
-A website to be.
+A site.
 
 http://q-ws.herokuapp.com/
